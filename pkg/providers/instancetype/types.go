@@ -345,6 +345,7 @@ func computeCapacity(ctx context.Context, info ec2types.InstanceTypeInfo, amiFam
 		v1.ResourceAWSNeuronCore:        *awsNeuronCores(info),
 		v1.ResourceHabanaGaudi:          *habanaGaudis(info),
 		v1.ResourceEFA:                  *efas(info, networkInterfaces),
+		resourceHugePages2Mi:            *hugepages2Mi(info),
 	}
 	return resourceList
 }
